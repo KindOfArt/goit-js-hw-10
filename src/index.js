@@ -32,26 +32,17 @@ function onInputChange(e) {
         throw new Error();
       }
 
-      return countries;
-    })
-    .then(countries => {
       if (countries.length === 1) {
-        return countries.map(murckupForCountry);
+        refs.countryInfo.insertAdjacentHTML(
+          'beforeend',
+          countries.map(murckupForCountry).join('')
+        );
       }
       if (countries.length > 1 && countries.length < 10) {
-        return countries.map(murkupForCountries);
-      }
-    })
-    .then(murkup => {
-      if (murkup.length === 1) {
-        const murkupCountry = murkup.join('');
-
-        refs.countryInfo.insertAdjacentHTML('beforeend', murkupCountry);
-      }
-      if (murkup.length > 1 && murkup.length < 10) {
-        const murkupList = murkup.join('');
-
-        refs.countryList.insertAdjacentHTML('beforeend', murkupList);
+        refs.countryList.insertAdjacentHTML(
+          'beforeend',
+          countries.map(murkupForCountries).join('')
+        );
       }
     })
     .catch(err => {
