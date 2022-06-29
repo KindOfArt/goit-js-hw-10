@@ -22,7 +22,9 @@ function onInputChange(e) {
   }
 
   removeMurkup();
+
   const searchValue = e.target.value.trim();
+
   newsApiServise.query = searchValue;
 
   newsApiServise
@@ -33,13 +35,13 @@ function onInputChange(e) {
       }
 
       if (countries.length === 1) {
-        refs.countryInfo.insertAdjacentHTML(
+        return refs.countryInfo.insertAdjacentHTML(
           'beforeend',
           countries.map(murckupForCountry).join('')
         );
       }
       if (countries.length > 1 && countries.length < 10) {
-        refs.countryList.insertAdjacentHTML(
+        return refs.countryList.insertAdjacentHTML(
           'beforeend',
           countries.map(murkupForCountries).join('')
         );
