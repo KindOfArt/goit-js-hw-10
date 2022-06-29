@@ -32,15 +32,19 @@ body {
 /* ============FOR ONE COUNTRY========= */
 .country-info {
 }
+.country-info__name-thumb {
+  display: flex;
+  align-items: center;
+}
 .country-info__img {
   display: inline-block;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   margin-right: 5px;
 }
 .country-info__name {
   font-weight: 900;
-  font-size: 44px;
+  font-size: 36px;
 }
 .country-info__list {
 }

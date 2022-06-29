@@ -6,9 +6,9 @@ export default function murckupForCountry({
   languages,
 }) {
   const langList = Object.values(languages);
-  return `  <img src="${svg}" alt="flag" width="30" height="30" class="country-info__img" /><span
+  return `  <div class='country-info__name-thumb'><img src="${svg}" alt="flag" width="30" height="30" class="country-info__img" /><span
   class="country-info__name"
->${official}</span>
+>${official}</span></div>
 <ul class="country-info__list">
   <li class="country-info__item">
     <p class="country-info__text">Capital: <span class="country-info__text-description">${capital}</span></p>
